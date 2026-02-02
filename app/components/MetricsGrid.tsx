@@ -1,4 +1,38 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 export default function MetricsGrid() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Add delay to match connector loading time (8-10 seconds)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // 5 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="metrics-grid">
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} className="metric-card" style={{ opacity: 0.6 }}>
+            <div className="metric-icon" style={{ background: '#e0e0e0', animation: 'pulse 1.5s ease-in-out infinite' }}>
+              <div style={{ width: '24px', height: '24px', background: '#f5f5f5', borderRadius: '4px' }}></div>
+            </div>
+            <div className="metric-content">
+              <div className="metric-label" style={{ background: '#e0e0e0', height: '16px', width: '120px', borderRadius: '4px', marginBottom: '8px' }}></div>
+              <div className="metric-value" style={{ background: '#e0e0e0', height: '32px', width: '60px', borderRadius: '4px', marginBottom: '4px' }}></div>
+              <div className="metric-change" style={{ background: '#e0e0e0', height: '14px', width: '100px', borderRadius: '4px' }}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="metrics-grid">
       <div className="metric-card">
