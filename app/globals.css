@@ -195,6 +195,12 @@ body {
     font-weight: 500;
 }
 
+.nav-item.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+
 .nav-icon {
     width: 20px;
     height: 20px;
