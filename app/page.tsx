@@ -85,10 +85,10 @@ export default function Home() {
               <div className="code-block-header">
                 <span className="code-lang">React / JSX</span>
               </div>
-              <pre><code>{`const hyperswitch = loadHyperswitch({ fetchToken });
+              <pre><code>{`const hyperswitchInstance = loadHyperswitch({ fetchToken });
 
-<HyperswitchProvider instance={hyperswitch}>
-  <ConnectorConfiguration />
+<HyperswitchProvider hyperswitchInstance={hyperswitchInstance}>
+  <ConnectorConfiguration url="https://app.hyperswitch.io/api" />
 </HyperswitchProvider>`}</code></pre>
             </div>
           </div>
