@@ -5,7 +5,6 @@ import {loadHyperswitch,HyperswitchProvider,ConnectorConfiguration} from 'hypers
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ContentHeader from './components/ContentHeader';
-import MetricsGrid from './components/MetricsGrid';
 import SectionHeader from './components/SectionHeader';
 
 export default function Home() {
@@ -55,8 +54,7 @@ export default function Home() {
       <div className="dashboard-layout">
         <Sidebar />
         <main className="main-content">
-          <ContentHeader />
-          <MetricsGrid />
+          <ContentHeader/>
           <SectionHeader />
           {/* EMBEDDABLE COMPONENT: Using HyperswitchProvider and ConnectorConfiguration directly */}
           <div className="embedded-container">
