@@ -2,12 +2,12 @@ export default function ContentHeader() {
   return (
     <div className="content-header">
       <div>
-        <h2>Payment Configuration Dashboard</h2>
+        <h2>Payment Connectors</h2>
         <p className="subtitle">
-          Manage your payment connectors and embeddable components
+          Connect and manage payment processors for your sub-merchants. They can onboard
+          their preferred providers directly from this page.
         </p>
       </div>
     </div>
   );
 }
-
